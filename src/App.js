@@ -21,7 +21,9 @@ function App() {
 
   const parseVttJsonToMilkJson = (vttJson) => {
     const milkJson = vttJson.map(wordEl => ({
-
+      text: wordEl.part,
+      start: wordEl.start,
+      end: wordEl.end,
     }))
 
     return milkJson
@@ -31,7 +33,6 @@ function App() {
 
   return (
     <div className="App">
-      {/* This example requires Tailwind CSS v2.0+ */}
       <div className="min-h-screen bg-gray-100">
         <div className="py-10">
           <header>
@@ -40,7 +41,7 @@ function App() {
                 Transform VTT to Milk JSON
               </h1>
               <p className="text-lg font-medium leading-tight text-gray-900">
-                Transform VTT to Milk JSON
+                Paste VTT into left box
               </p>
             </div>
           </header>
